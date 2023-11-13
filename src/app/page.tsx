@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import Introduce from "../../components/Home/Introduce";
 import Information from "../../components/Home/Information";

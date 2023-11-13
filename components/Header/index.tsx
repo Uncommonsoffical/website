@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import logo from "@/images/logo.svg";
 import Link from "next/link";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const navList = [
   {
@@ -60,7 +61,7 @@ function Header() {
           </Link>
         ))}
       </Box>
-      <Button>Wallet connected</Button>
+      <ConnectButton accountStatus="avatar" showBalance={false} />
     </Box>
   );
 }

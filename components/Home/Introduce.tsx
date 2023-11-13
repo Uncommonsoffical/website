@@ -7,7 +7,6 @@ import Hammer from "@/images/Hammer.svg";
 import Plant from "@/images/Plant.svg";
 import RainbowCloud from "@/images/RainbowCloud.svg";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 const TextBox = styled("div")`
   position: absolute;
