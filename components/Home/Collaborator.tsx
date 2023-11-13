@@ -30,13 +30,11 @@ function Collaborator() {
         sx={{
           "& img": { height: "42px", width: "auto", marginRight: "56px" },
         }}>
-        <Link href="/" target="_blank">
-          <Image src={collaborator} alt="collaborator" />
-        </Link>
-        <Link href="/" target="_blank">
+        <Image src={collaborator} alt="collaborator" />
+        <Link href="https://www.4seas.io/" target="_blank">
           <Image src={SEAS} alt="4SEAS" />
         </Link>
-        <Link href="https://lxdao.io/" target="_blank">
+        <Link href="https://lxdao.io/" target="_blank" title="lxdao">
           <Image src={LXDAO} alt="LXDAO" />
         </Link>
         <Link href="https://plancker.org/">

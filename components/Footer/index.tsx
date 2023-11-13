@@ -29,13 +29,15 @@ function Footer() {
           marginRight="32px">
           Social media
         </Typography>
-        <Link href="/" target="_blank">
+        <Link href="https://twitter.com/home" target="_blank">
           <Image src={twitter} alt="twitter" style={{ marginRight: "24px" }} />
         </Link>
-        <Link href="/" target="_blank">
+        <Link href="https://medium.com/@greenpillcn" target="_blank">
           <Image src={medium} alt="medium" style={{ marginRight: "24px" }} />
         </Link>
-        <Link href="/" target="_blank">
+        <Link
+          href="https://www.figma.com/file/67d1POjIwm8phTFbMfSgdI/Uncommons-%E5%AE%98%E7%BD%91?type=design&node-id=260-1420&mode=design&t=UZcgabvPkoaJ6MKN-0"
+          target="_blank">
           <Image src={frame} alt="frame" style={{ marginRight: "64px" }} />
         </Link>
         <Typography
@@ -46,14 +48,14 @@ function Footer() {
           marginRight="32px">
           Community
         </Typography>
-        <Link href="/" target="_blank">
+        <Link href="https://t.me/theuncommons" target="_blank">
           <Image
             src={telegram}
             alt="telegram"
             style={{ marginRight: "24px" }}
           />
         </Link>
-        <Link href="/" target="_blank">
+        <Link href="https://discord.gg/EHSGYKJV" target="_blank">
           <Image src={discord} alt="discord" />
         </Link>
       </Box>
