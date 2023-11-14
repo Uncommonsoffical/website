@@ -28,6 +28,9 @@ function Collaborator() {
         Our collaborator
       </Typography>
       <Box
+        display="flex"
+        justifyContent="center"
+        flexDirection="column"
         sx={{
           "& img": { height: "42px", width: "auto", marginRight: "56px" },
         }}>
