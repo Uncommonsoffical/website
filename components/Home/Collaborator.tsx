@@ -35,7 +35,7 @@ function Collaborator() {
           "& img": {
             height: "42px",
             width: "auto",
-            marginRight: "56px",
+            marginX: "28px",
             marginBottom: "24px",
           },
         }}>
