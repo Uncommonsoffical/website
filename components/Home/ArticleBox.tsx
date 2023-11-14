@@ -49,16 +49,12 @@ function ArticleBox() {
                 component="h2"
                 fontSize="28px"
                 paddingTop="24px"
-                fontFamily="Heiti SC"
                 marginBottom="auto">
                 内容共创｜Why Humans Must Die
               </Typography>
               <Box height="100%"></Box>
 
-              <Typography
-                component="span"
-                fontFamily="Lexend Exa"
-                fontSize="20px">
+              <Typography component="span" fontSize="20px">
                 阿森、Twone、Wingo、K
               </Typography>
               <Box flexShrink="0" marginTop="12px">
@@ -104,16 +100,12 @@ function ArticleBox() {
                 component="h2"
                 fontSize="28px"
                 paddingTop="24px"
-                fontFamily="Heiti SC"
                 marginBottom="auto">
                 解密 ReFi 全景图谱：链上碳市场及其未来（一）
               </Typography>
               <Box height="100%"></Box>
 
-              <Typography
-                component="span"
-                fontFamily="Lexend Exa"
-                fontSize="20px">
+              <Typography component="span" fontSize="20px">
                 不白、Shannon、K、蔓、Weiwei
               </Typography>
               <Box flexShrink="0" marginTop="12px">
@@ -159,17 +151,13 @@ function ArticleBox() {
                 component="h2"
                 fontSize="28px"
                 paddingTop="24px"
-                fontFamily="Heiti SC"
                 marginBottom="auto"
                 color="#000">
                 从世界游戏说开来：如何用DAO和以太坊构筑一个更好的世界
               </Typography>
               <Box height="100%"></Box>
 
-              <Typography
-                component="span"
-                fontFamily="Lexend Exa"
-                fontSize="20px">
+              <Typography component="span" fontSize="20px">
                 Twone、Survivor
               </Typography>
               <Box flexShrink="0" marginTop="12px">

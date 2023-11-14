@@ -30,7 +30,6 @@ function WorkStream() {
             height="160px"
             component="p"
             color="#574729"
-            fontFamily="Lexend Exa"
             fontSize="36px"
             fontWeight="600">
             Ethereum Translation Team
@@ -40,7 +39,6 @@ function WorkStream() {
             marginTop="16px"
             borderTop="1px solid #574729"
             color="#574729"
-            fontFamily="Lexend Deca"
             fontSize="22px"
             fontWeight="300">
             Translating Ethereum content alongside other communities, the
@@ -53,7 +51,6 @@ function WorkStream() {
             height="160px"
             component="p"
             color="#574729"
-            fontFamily="Lexend Exa"
             fontSize="36px"
             fontWeight="600">
             GreenPill Podcast Co-learning
@@ -63,7 +60,6 @@ function WorkStream() {
             marginTop="16px"
             borderTop="1px solid #574729"
             color="#574729"
-            fontFamily="Lexend Deca"
             fontSize="22px"
             fontWeight="300">
             Participants extract key insights and engage in collaborative
@@ -75,21 +71,20 @@ function WorkStream() {
             height="160px"
             component="p"
             color="#574729"
-            fontFamily="Lexend Exa"
             fontSize="36px"
             fontWeight="600">
-            Uncommons x Nouns
+            Uncommons x Protector
           </Typography>
           <Typography
             component="p"
             marginTop="16px"
             borderTop="1px solid #574729"
             color="#574729"
-            fontFamily="Lexend Deca"
             fontSize="22px"
             fontWeight="300">
-            The Uncommons community actively engages in Nouns' ecological
-            governance.
+            Governance through participation: Through collaboration with
+            Protector, members of Uncommons are actively participating the
+            governance of DAOs, such as Nouns, Optimism, Arbitrum and more...
           </Typography>
         </Box>
         <Box width="300px">
@@ -97,7 +92,6 @@ function WorkStream() {
             height="160px"
             component="p"
             color="#574729"
-            fontFamily="Lexend Exa"
             fontSize="36px"
             fontWeight="600">
             Desci workshop
@@ -107,7 +101,6 @@ function WorkStream() {
             marginTop="16px"
             borderTop="1px solid #574729"
             color="#574729"
-            fontFamily="Lexend Deca"
             fontSize="22px"
             fontWeight="300">
             The Uncommons community organized the Desci Talks series,
@@ -120,7 +113,6 @@ function WorkStream() {
             height="160px"
             component="p"
             color="#574729"
-            fontFamily="Lexend Exa"
             fontSize="36px"
             fontWeight="600">
             WAMO anniversary content writing
@@ -130,7 +122,6 @@ function WorkStream() {
             marginTop="16px"
             borderTop="1px solid #574729"
             color="#574729"
-            fontFamily="Lexend Deca"
             fontSize="22px"
             fontWeight="300">
             Examining the Uncommons community's pivotal role in co-creating Wamo
@@ -142,7 +133,6 @@ function WorkStream() {
             height="160px"
             component="p"
             color="#574729"
-            fontFamily="Lexend Exa"
             fontSize="36px"
             fontWeight="600">
             Crypto Nomad
@@ -152,7 +142,6 @@ function WorkStream() {
             marginTop="16px"
             borderTop="1px solid #574729"
             color="#574729"
-            fontFamily="Lexend Deca"
             fontSize="22px"
             fontWeight="300">
             Exploring the novel political identity constructed by the 'crypto

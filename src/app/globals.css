@@ -22,7 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family:  Gurmukhi MN;
+	font-family:  Gurmukhi MN, 楷体;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

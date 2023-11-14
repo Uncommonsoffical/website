@@ -10,7 +10,7 @@ import WBF from "@/images/WBF-logo.svg";
 import ddao from "@/images/ddao-logo.png";
 import Link from "next/link";
 
-function Collaborator() {
+function Partner() {
   return (
     <Box
       paddingX={{ lg: "48px", xl: "150px" }}
@@ -25,7 +25,7 @@ function Collaborator() {
         fontSize="60px"
         fontWeight="600"
         marginBottom="48px">
-        Our collaborator
+        Our Partner
       </Typography>
       <Box
         display="flex"
@@ -63,4 +63,4 @@ function Collaborator() {
   );
 }
 
-export default Collaborator;
+export default Partner;

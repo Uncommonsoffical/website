@@ -4,7 +4,7 @@ import Introduce from "../../components/Home/Introduce";
 import Information from "../../components/Home/Information";
 import ArticleBox from "../../components/Home/ArticleBox";
 import Workstream from "../../components/Home/WorkStream";
-import Collaborator from "../../components/Home/Collaborator";
+import Collaborator from "../../components/Home/Partner";
 
 export default function Home() {
   return (

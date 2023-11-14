@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import WalletConnect from "../../components/WalletConnect";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
