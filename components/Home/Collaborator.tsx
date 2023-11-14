@@ -30,9 +30,14 @@ function Collaborator() {
       <Box
         display="flex"
         justifyContent="center"
-        flexDirection="column"
+        flexWrap="wrap"
         sx={{
-          "& img": { height: "42px", width: "auto", marginRight: "56px" },
+          "& img": {
+            height: "42px",
+            width: "auto",
+            marginRight: "56px",
+            marginBottom: "24px",
+          },
         }}>
         <Image src={collaborator} alt="collaborator" />
         <Link href="https://www.4seas.io/" target="_blank">
