@@ -7,6 +7,7 @@ import SEAS from "@/images/4SEAS-logo.png";
 import plancker from "@/images/plancker-logo.svg";
 import abcd from "@/images/abcd-logo.png";
 import WBF from "@/images/WBF-logo.svg";
+import ddao from "@/images/ddao-logo.png";
 import Link from "next/link";
 
 function Collaborator() {
@@ -45,6 +46,9 @@ function Collaborator() {
         </Link>
         <Link href="/" target="_blank">
           <Image src={WBF} alt="WBF" />
+        </Link>
+        <Link href="https://discord.gg/sg5c3zqJ6M" target="_blank">
+          <Image src={ddao} alt="WBF" />
         </Link>
       </Box>
     </Box>
