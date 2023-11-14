@@ -64,7 +64,7 @@ function Header() {
       <ConnectButton
         accountStatus="avatar"
         showBalance={false}
-        label="Connect Wallet"
+        label="Wallet Connect"
       />
     </Box>
   );
