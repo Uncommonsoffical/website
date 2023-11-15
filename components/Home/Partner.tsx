@@ -11,12 +11,14 @@ import ddao from "@/images/ddao-logo.svg";
 import ptdao from "@/images/ptdao-svg.svg";
 import GCC from "@/images/GCC-logo.svg";
 import Link from "next/link";
+import { useStore } from "@/store";
 
 function Partner() {
+  const { isPhone } = useStore();
   return (
     <Box
-      paddingX={{ lg: "48px", xl: "150px" }}
-      paddingY="100px"
+      paddingX={{ lg: "48px", xl: "150px", sm: "48px", xs: "48px" }}
+      paddingY={{ sm: "100px", xs: "64px" }}
       style={{
         borderTop: "1px solid #727272",
         background:
@@ -24,21 +26,24 @@ function Partner() {
       }}>
       <Typography
         component="h3"
-        fontSize="60px"
+        fontSize={{ lg: "60px", sm: "40px", xs: "24px" }}
         fontWeight="600"
-        marginBottom="48px">
+        marginBottom={{ sm: "48px", xs: "24px" }}>
         Our Partner
       </Typography>
       <Box
         display="flex"
-        justifyContent="center"
+        justifyContent={{ lg: "center", sm: "space-evenly", xs: "flex-start" }}
         flexWrap="wrap"
+        flexDirection={{ xs: "column", sm: "row" }}
         sx={{
           "& img": {
             height: "42px",
-            width: "auto",
-            marginX: "28px",
+            width: "max-content",
+            maxWidth: "100%",
+            marginX: isPhone ? 0 : "28px",
             marginBottom: "24px",
+            flexShrink: 0,
           },
         }}>
         <Image src={collaborator} alt="collaborator" />

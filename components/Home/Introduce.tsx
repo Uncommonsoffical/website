@@ -1,19 +1,17 @@
 "use client";
 
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, useTheme, useMediaQuery } from "@mui/material";
 import styled from "@emotion/styled";
 import Cursorlick from "@/images/CursorClick.svg";
 import Hammer from "@/images/Hammer.svg";
 import Plant from "@/images/Plant.svg";
 import RainbowCloud from "@/images/RainbowCloud.svg";
 import Image from "next/image";
+import { useStore } from "@/store";
 
 const TextBox = styled(Box)`
   position: absolute;
   width: max-content;
-  height: 64px;
-  padding: 16px 32px;
-  font-size: 48px;
   font-weight: 400;
   border: 1px solid #1a1a1a;
   background: #fff;
@@ -23,9 +21,12 @@ const TextBox = styled(Box)`
 `;
 
 function Introduce() {
+  const { isPC, isIpad, isPhone } = useStore();
+  const imgSize = isPC ? "64px" : isIpad ? "54px" : isPhone ? "24px" : "64px";
+
   return (
     <Box
-      height="590px"
+      height={{ sm: "590px", xs: "350px" }}
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -33,33 +34,70 @@ function Introduce() {
         background:
           "linear-gradient(180deg, #C9EFFA 0%, rgba(255, 255, 255, 0.00) 116.67%)",
       }}>
-      <Box position="relative" height="390px" width="1000px">
-        <TextBox style={{ left: "0", top: "0" }}>Uncommons is</TextBox>
-        <TextBox style={{ right: "16px", top: "16px" }}>
+      <Box
+        position="relative"
+        height={{ lg: "390px", sm: "470px", xs: "270px" }}
+        width={{ lg: "1000px", sm: "730px", xs: "330px" }}
+        fontSize={{ lg: "48px", sm: "32px", xs: "20px" }}>
+        <TextBox
+          height={{ sm: "64px", xs: "24px" }}
+          padding={{ sm: "16px 32px", xs: "12px 16px" }}
+          left={{ lg: 0, sm: "60px", xs: 0 }}
+          top={{ lg: 0, sm: 0, xs: 0 }}
+          zIndex={{ lg: 0, sm: 1, xs: 1 }}>
+          Uncommons is
+        </TextBox>
+        <TextBox
+          padding={{ sm: "16px 32px", xs: "12px 16px" }}
+          height={{ sm: "64px", xs: "24px" }}
+          right={{ lg: "16px", sm: "26px", xs: "50px" }}
+          top={{ lg: "16px", sm: "80px", xs: "45px" }}>
           a digital commons
           <Image
             src={RainbowCloud}
             alt="RainbowCloud"
-            style={{ marginLeft: "16px", width: "64px", height: "64px" }}
+            style={{
+              marginLeft: isPhone ? "8px" : "16px",
+              width: imgSize,
+              height: imgSize,
+            }}
           />
         </TextBox>
-        <TextBox style={{ left: "220px", top: "110px" }}>
+        <TextBox
+          padding={{ sm: "16px 32px", xs: "12px 16px" }}
+          height={{ sm: "64px", xs: "24px" }}
+          left={{ lg: "220px", sm: "0px", xs: "10px" }}
+          top={{ lg: "110px", sm: "150px", xs: "100px" }}>
           a digital garden
           <Image
             src={Plant}
             alt="Plant"
-            style={{ marginLeft: "16px", width: "64px", height: "64px" }}
+            style={{
+              marginLeft: isPhone ? "8px" : "16px",
+              width: imgSize,
+              height: imgSize,
+            }}
           />
         </TextBox>
-        <TextBox style={{ left: "0", bottom: "60px" }}>
+        <TextBox
+          padding={{ sm: "16px 32px", xs: "12px 16px" }}
+          height={{ sm: "64px", xs: "24px" }}
+          left={{ lg: "0", sm: "80px", xs: "30px" }}
+          bottom={{ lg: "60px", sm: "140px", xs: "60px" }}>
           for public goods builders
           <Image
             src={Hammer}
             alt="Hammer"
-            style={{ marginLeft: "16px", width: "64px", height: "64px" }}
+            style={{
+              marginLeft: isPhone ? "8px" : "16px",
+              width: imgSize,
+              height: imgSize,
+            }}
           />
         </TextBox>
         <TextBox
+          padding={{ sm: "16px 32px", xs: "12px 16px" }}
+          height={{ sm: "64px", xs: "24px" }}
           style={{ right: "0", bottom: "0" }}
           sx={{
             cursor: "pointer",
@@ -69,7 +107,11 @@ function Introduce() {
           <Image
             src={Cursorlick}
             alt="Cursorlick"
-            style={{ marginLeft: "16px", width: "64px", height: "64px" }}
+            style={{
+              marginLeft: isPhone ? "8px" : "16px",
+              width: imgSize,
+              height: imgSize,
+            }}
           />
         </TextBox>
       </Box>
