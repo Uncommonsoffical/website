@@ -3,11 +3,13 @@ import Image from "next/image";
 
 import collaborator from "@/images/collaborator.png";
 import LXDAO from "@/images/LXDAO-logo.svg";
-import SEAS from "@/images/4SEAS-logo.png";
+import SEAS from "@/images/4SEAS-logo.svg";
 import plancker from "@/images/plancker-logo.svg";
 import abcd from "@/images/abcd-logo.png";
 import WBF from "@/images/WBF-logo.svg";
-import ddao from "@/images/ddao-logo.png";
+import ddao from "@/images/ddao-logo.svg";
+import ptdao from "@/images/ptdao-svg.svg";
+import GCC from "@/images/GCC-logo.svg";
 import Link from "next/link";
 
 function Partner() {
@@ -57,6 +59,12 @@ function Partner() {
         </Link>
         <Link href="https://discord.gg/sg5c3zqJ6M" target="_blank">
           <Image src={ddao} alt="WBF" />
+        </Link>
+        <Link href="/" target="_blank">
+          <Image src={ptdao} alt="ptdao" />
+        </Link>
+        <Link href="/" target="_blank">
+          <Image src={GCC} alt="GCC" />
         </Link>
       </Box>
     </Box>

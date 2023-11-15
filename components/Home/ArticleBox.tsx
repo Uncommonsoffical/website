@@ -23,13 +23,21 @@ function ArticleBox() {
         marginBottom="48px">
         Featured articles
       </Typography>
-      <Grid container spacing={2}>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          "& .article:hover": {
+            boxShadow: "4px 4px 24px 0px rgba(0, 0, 0, 0.10)",
+          },
+        }}>
         <Grid xs={4}>
           <Link
             style={{ textDecoration: "none", color: "#000" }}
             href="https://www.notion.so/Why-Humans-Must-Die-0378eefd4b944559aa37340d80be2a8b?pvs=4"
             target="_blank">
             <Box
+              className="article"
               height="500px"
               padding="24px"
               display="flex"
@@ -81,6 +89,7 @@ function ArticleBox() {
             href="https://www.notion.so/ReFi-f00a18bd74824cd1837c0a186b5a72ee?pvs=4"
             target="_blank">
             <Box
+              className="article"
               height="500px"
               padding="24px"
               display="flex"
@@ -132,6 +141,7 @@ function ArticleBox() {
             href="https://www.notion.so/DAO-1b75182cabaf4f8bb4e4a0c90b75d1c4?pvs=4"
             target="_blank">
             <Box
+              className="article"
               height="500px"
               padding="24px"
               display="flex"
@@ -186,7 +196,9 @@ function ArticleBox() {
         marginTop="12px"
         textAlign="right"
         color="#2E2E2E"
-        fontSize="24px">
+        style={{ textDecoration: "none" }}
+        fontSize="24px"
+        sx={{ "&:hover": { textDecoration: "underline !important" } }}>
         read more
       </Typography>
     </Box>

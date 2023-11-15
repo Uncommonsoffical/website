@@ -8,7 +8,7 @@ import Plant from "@/images/Plant.svg";
 import RainbowCloud from "@/images/RainbowCloud.svg";
 import Image from "next/image";
 
-const TextBox = styled("div")`
+const TextBox = styled(Box)`
   position: absolute;
   width: max-content;
   height: 64px;
@@ -59,7 +59,12 @@ function Introduce() {
             style={{ marginLeft: "16px", width: "64px", height: "64px" }}
           />
         </TextBox>
-        <TextBox style={{ right: "0", bottom: "0" }}>
+        <TextBox
+          style={{ right: "0", bottom: "0" }}
+          sx={{
+            cursor: "pointer",
+            "&:hover": { boxShadow: "4px 4px 24px 0px rgba(0, 0, 0, 0.10)" },
+          }}>
           Join us!
           <Image
             src={Cursorlick}
