@@ -34,6 +34,10 @@ function Introduce() {
         background:
           "linear-gradient(180deg, #C9EFFA 0%, rgba(255, 255, 255, 0.00) 116.67%)",
       }}>
+      <Typography variant="h1" display="none">
+        Uncommons is a digital commons a digital garden for public goods
+        builders
+      </Typography>
       <Box
         position="relative"
         height={{ lg: "390px", sm: "470px", xs: "270px" }}

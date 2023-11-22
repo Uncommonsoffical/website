@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const title = "Uncommmons";
 const description =
-  "Uncommons isa digital commons digital garden public goods builders";
+  "Uncommons is a digital commons a digital garden for public goods builders";
 
 export const metadata: Metadata = {
   title,
