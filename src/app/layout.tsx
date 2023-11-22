@@ -22,6 +22,12 @@ export const metadata: Metadata = {
   creator: "Uncommmons",
   publisher: "Uncommmons",
 
+  icons: {
+    icon: "/logo.jpeg",
+    shortcut: "/logo.jpeg",
+    apple: "/logo.jpeg",
+  },
+
   openGraph: {
     title,
     description,
@@ -29,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Uncommmons",
     images: [
       {
-        url: "https://uncommons.cc/logo.png",
+        url: "https://uncommons.cc/logo.svg",
         width: 800,
         height: 600,
       },
@@ -42,7 +48,7 @@ export const metadata: Metadata = {
     title,
     description,
     creator: "@Un__commons",
-    images: ["https://uncommons.cc/logo.png"],
+    images: ["https://uncommons.cc/logo.svg"],
   },
 };
 
