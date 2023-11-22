@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -14,6 +15,7 @@
     "@mui/material": "^5.14.17",
     "@rainbow-me/rainbowkit": "^1.2.0",
     "next": "14.0.2",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
     "viem": "^1.19.0",
