@@ -20,7 +20,7 @@ function Footer() {
       justifyContent={{ lg: "space-between", sm: "flex-start" }}
       alignItems={{ lg: "center", sm: "flex-start", xs: "flex-start" }}
       flexDirection={{ lg: "row", sm: "column", xs: "column" }}
-      paddingX={{ lg: "48px", xl: "150px", sm: "48px", xs: "24px" }}
+      paddingX={{ xs: "24px", sm: "48px" }}
       paddingY="24px"
       sx={{ "& img": { height: "50px", width: "auto" } }}
       style={{
@@ -54,9 +54,7 @@ function Footer() {
             style={{ marginRight: "16px", width: imgSize }}
           />
         </Link>
-        <Link
-          href="https://www.figma.com/file/67d1POjIwm8phTFbMfSgdI/Uncommons-%E5%AE%98%E7%BD%91?type=design&node-id=260-1420&mode=design&t=UZcgabvPkoaJ6MKN-0"
-          target="_blank">
+        <Link href="https://matters.town/@creatorgreen" target="_blank">
           <Image
             src={frame}
             alt="frame"

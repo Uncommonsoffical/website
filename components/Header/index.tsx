@@ -17,15 +17,15 @@ import { useStore } from "@/store";
 const navList = [
   {
     text: "About",
-    href: "/baidu",
+    href: "/AboutUs",
   },
   {
     text: "Content",
-    href: "/",
+    href: "/Content",
   },
   {
     text: "Community",
-    href: "/",
+    href: "/Community",
   },
   {
     text: "Database",
@@ -33,7 +33,7 @@ const navList = [
   },
   {
     text: "Join Us",
-    href: "/",
+    href: "/JoinUs",
   },
 ];
 
@@ -53,13 +53,16 @@ function Header() {
       paddingX={{ xs: "24px", sm: "48px" }}
       paddingY="24px"
       display="flex"
-      justifyContent="space-between">
+      justifyContent="space-between"
+      borderBottom="1px solid #727272">
       <Box display="flex" alignItems="center">
-        <Image
-          src={logo}
-          alt="logo"
-          style={{ paddingRight: "16px", width: "134px" }}
-        />
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="logo"
+            style={{ paddingRight: "16px", width: "134px" }}
+          />
+        </Link>
         {isPC &&
           navList.map((nav) => (
             <Link
@@ -97,7 +100,6 @@ function Header() {
             accountStatus="avatar"
             chainStatus="none"
           />
-
           <Menu
             id="basic-menu"
             anchorEl={anchorEl}
@@ -129,7 +131,7 @@ function Header() {
           <Typography
             display="flex"
             alignItems="center"
-            marginRight="12px"
+            marginLeft="12px"
             onClick={handleClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
