@@ -1,7 +1,4 @@
 import { NextResponse, NextRequest } from "next/server";
-
-import { Client } from "@notionhq/client";
-import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
 export const GET = async (req: NextRequest, res: NextResponse) => {
