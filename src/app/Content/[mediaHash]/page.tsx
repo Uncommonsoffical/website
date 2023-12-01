@@ -57,7 +57,20 @@ function ArticleDetail() {
           {moment(data.createdAt).format("YYYY-MM-DD HH:mm:ss")}
         </Typography>
       </Box>
-      <div dangerouslySetInnerHTML={{ __html: data.content }} />
+      <Box
+        sx={{
+          "& img": {
+            width: "auto",
+            height: "auto",
+            maxWidth: "300px",
+            maxHeight: "300px",
+          },
+          "& .smart": {
+            display: "none",
+          },
+        }}>
+        <Box dangerouslySetInnerHTML={{ __html: data.content }} />
+      </Box>
     </Box>
   );
 }
