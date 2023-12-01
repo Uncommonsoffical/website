@@ -11,28 +11,11 @@ function ArticleDetail() {
     data = {},
     error,
     isLoading,
-  } = useSWR("/getArticleContent", async () => {
-    const result = await axios.post("https://server.matters.news/graphql", {
-      mode: "cors",
-      withCredentials: true,
-      query: `query {
-        article(input:{mediaHash:"${mediaHash}"}){
-          id,
-          title,
-          summary,
-          content,
-          createdAt,
-          author {
-            userName
-          },
-          tags {
-            content
-          }
-        }
-      }
-      `,
+  } = useSWR("/api/getArticleContent", async () => {
+    const result = await axios.get("/api/getArticleContent", {
+      params: { mediaHash },
     });
-    return result?.data?.data?.article || {};
+    return result?.data?.article || {};
   });
 
   if (isLoading) {

@@ -31,54 +31,20 @@ function Content() {
     data: articleList = [],
     error,
     isLoading,
-  } = useSWR("/getContentList", async () => {
-    const result = await axios.post(
-      "https://server.matters.news/graphql",
-      {
-        query: `query {
-        user(input: { ethAddress: "0x1b1ab439770b938d900d876038676f4697170049" }) {
-          id
-          userName
-          avatar
-          articles(input: {}) {
-            totalCount
-            edges {
-              node {
-                mediaHash
-                title
-                cover
-                summary
-                tags {
-                  content
-                }
-                author {
-                  userName
-                }
-              }
-            }
-          }
-        }
-      }
-      `,
-      },
-      {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET, POST",
-          "Access-Control-Allow-Headers": "Content-Type",
-        },
-        withCredentials: true,
-      }
-    );
+  } = useSWR("/api/getContentList", async () => {
+    const result = await axios.get("/api/getContentList");
     const list =
-      result.data.data?.user?.articles?.edges?.map((i: any) => ({
+      result?.data?.user?.articles?.edges?.map((i: any) => ({
         ...i.node,
       })) || [];
     return list as ArticleType[];
   });
+  console.log("articleList", articleList);
   const imgSize = isPC ? "100%" : isIpad ? "168px" : "100%";
   return (
-    <Box padding={{ xs: "88px 28px", sm: "88px 48px", xl: "88px 150px" }}>
+    <Box
+      minHeight={{ sm: "calc(100vh - 380px)" }}
+      padding={{ xs: "88px 28px", sm: "88px 48px", xl: "88px 150px" }}>
       <Typography
         variant="h2"
         fontSize={{ sm: "33px", xs: "23px" }}
