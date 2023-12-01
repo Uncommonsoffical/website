@@ -1,10 +1,10 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
 import { Client } from "@notionhq/client";
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
-export const GET = async (req, res: NextResponse) => {
+export const GET = async (req: NextRequest, res: NextResponse) => {
   const response = await await axios.post(
     "https://server.matters.news/graphql",
     {
