@@ -32,32 +32,41 @@ function Content() {
     error,
     isLoading,
   } = useSWR("/getContentList", async () => {
-    const result = await axios.post("https://server.matters.news/graphql", {
-      query: `query {
-        user(input: { ethAddress: "0x1b1ab439770b938d900d876038676f4697170049" }) {
-          id
-          userName
-          avatar
-          articles(input: {}) {
-            totalCount
-            edges {
-              node {
-                mediaHash
-                title
-                cover
-                summary
-                tags {
-                  content
-                }
-                author {
-                  userName
+    const result = await axios({
+      method: "post",
+      url: "https://server.matters.news/graphql",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+      data: {
+        query: `query {
+          user(input: { ethAddress: "0x1b1ab439770b938d900d876038676f4697170049" }) {
+            id
+            userName
+            avatar
+            articles(input: {}) {
+              totalCount
+              edges {
+                node {
+                  mediaHash
+                  title
+                  cover
+                  summary
+                  tags {
+                    content
+                  }
+                  author {
+                    userName
+                  }
                 }
               }
             }
           }
         }
-      }
-      `,
+        `,
+      },
     });
     const list =
       result.data.data?.user?.articles?.edges?.map((i: any) => ({
