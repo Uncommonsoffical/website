@@ -13,11 +13,8 @@ function ArticleDetail() {
     isLoading,
   } = useSWR("/getArticleContent", async () => {
     const result = await axios.post("https://server.matters.news/graphql", {
-      headers: {
-        "Access-control-allow-origin": "*",
-        "Access-Control-Allow-Headers": "content-type",
-        "Access-Control-Allow-Methods": "DELETE,PUT,POST,GET,OPTIONS",
-      },
+      mode: "cors",
+      withCredentials: true,
       query: `query {
         article(input:{mediaHash:"${mediaHash}"}){
           id,
