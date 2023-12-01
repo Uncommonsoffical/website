@@ -31,6 +31,11 @@ function Content() {
     isLoading,
   } = useSWR("/getContentList", async () => {
     const result = await axios.post("https://server.matters.news/graphql", {
+      headers: {
+        "Access-control-allow-origin": "*",
+        "Access-Control-Allow-Headers": "content-type",
+        "Access-Control-Allow-Methods": "DELETE,PUT,POST,GET,OPTIONS",
+      },
       query: `query {
         user(input: { ethAddress: "0x1b1ab439770b938d900d876038676f4697170049" }) {
           id
