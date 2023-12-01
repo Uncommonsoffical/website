@@ -34,7 +34,7 @@ function ArticleDetail() {
   });
 
   if (isLoading) {
-    return <Box>加载中</Box>;
+    return <Box minHeight={{ sm: "calc(100vh - 200px)" }}>加载中...</Box>;
   }
 
   return (
