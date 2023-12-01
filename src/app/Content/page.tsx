@@ -58,8 +58,9 @@ function Content() {
       `,
     });
     const list =
-      result.data.data?.user?.articles?.edges?.map((i) => ({ ...i.node })) ||
-      [];
+      result.data.data?.user?.articles?.edges?.map((i: any) => ({
+        ...i.node,
+      })) || [];
     return list as ArticleType[];
   });
   const imgSize = isPC ? "100%" : isIpad ? "168px" : "100%";
