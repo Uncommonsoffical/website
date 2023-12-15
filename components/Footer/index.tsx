@@ -34,7 +34,7 @@ function Footer() {
         alignItems="center">
         <Typography
           component="span"
-          fontSize={{ sm: "20px", xs: "16px" }}
+          fontSize={{ xs: "16px" }}
           fontWeight="600"
           color="#2E2E2E"
           marginRight="32px">
@@ -63,7 +63,7 @@ function Footer() {
         </Link>
         <Typography
           component="span"
-          fontSize={{ sm: "20px", xs: "16px" }}
+          fontSize={{ xs: "16px" }}
           fontWeight="600"
           color="#2E2E2E"
           marginRight="32px">

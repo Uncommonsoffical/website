@@ -38,11 +38,11 @@ function Partner() {
         flexDirection={{ xs: "column", sm: "row" }}
         sx={{
           "& img": {
-            height: "42px",
+            height: { md: "42px", xs: "33px" },
             width: "max-content",
             maxWidth: "100%",
             marginX: isPhone ? 0 : "28px",
-            marginBottom: "24px",
+            marginBottom: { md: "24px", xs: "16px" },
             flexShrink: 0,
           },
         }}>

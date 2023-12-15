@@ -6,6 +6,8 @@ import Cursorlick from "@/images/CursorClick.svg";
 import Hammer from "@/images/Hammer.svg";
 import Plant from "@/images/Plant.svg";
 import RainbowCloud from "@/images/RainbowCloud.svg";
+import leaf1 from "@/images/leaf1.png";
+import leaf2 from "@/images/leaf2.png";
 import Image from "next/image";
 import { useStore } from "@/store";
 
@@ -30,10 +32,35 @@ function Introduce() {
       display="flex"
       justifyContent="center"
       alignItems="center"
+      position="relative"
       style={{
         background:
           "linear-gradient(180deg, #C9EFFA 0%, rgba(255, 255, 255, 0.00) 116.67%)",
       }}>
+      <Image
+        src={leaf1}
+        alt="leaf1"
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "0",
+          width: "30%",
+          maxWidth: "300px",
+          height: "auto",
+        }}
+      />
+      <Image
+        src={leaf2}
+        alt="leaf2"
+        style={{
+          position: "absolute",
+          right: "0",
+          bottom: "30px",
+          width: "30%",
+          maxWidth: "300px",
+          height: "auto",
+        }}
+      />
       <Typography variant="h1" display="none">
         Uncommons is a digital commons a digital garden for public goods
         builders
@@ -104,6 +131,8 @@ function Introduce() {
           height={{ sm: "64px", xs: "24px" }}
           style={{ right: "0", bottom: "0" }}
           sx={{
+            color: "#FF6108",
+            border: "1px solid #FF6108 !important",
             cursor: "pointer",
             "&:hover": { boxShadow: "4px 4px 24px 0px rgba(0, 0, 0, 0.10)" },
           }}>
