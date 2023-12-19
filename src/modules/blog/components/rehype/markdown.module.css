@@ -1,0 +1,106 @@
+.container {
+  @apply text-xl leading-loose;
+}
+
+.container > p,
+.container > ul,
+.container > ol {
+  @apply m-5;
+}
+
+@screen lg {
+  .container > :not(img) {
+    @apply mx-52 my-5;
+  }
+}
+
+/* Hr */
+.container hr {
+  @apply my-8 h-[1px] border-none bg-current opacity-50;
+}
+
+/* Table */
+.container table thead th:empty {
+  @apply py-4;
+}
+
+.container table th,
+.container table td {
+  @apply p-2;
+}
+
+.container table tbody tr:nth-child(2n-1) {
+  @apply bg-white/50;
+}
+
+@screen lg {
+  .container table th,
+  .container table td {
+    @apply px-5;
+  }
+}
+
+/* Title */
+
+.container h2 {
+  @apply mb-4 mt-6 text-3xl font-medium;
+}
+
+.container h3 {
+  @apply mb-4 mt-6 text-2xl font-medium;
+}
+
+.container h4 {
+  @apply mb-4 mt-6 text-xl font-medium;
+}
+
+/* List */
+.container ul {
+  @apply my-2;
+
+  list-style: disc;
+}
+
+.container ol {
+  @apply my-2;
+
+  list-style: auto;
+  list-style-position: inside;
+}
+
+.container li > p + img {
+  @apply my-5 block;
+}
+
+.container li > ul,
+.container li > ol {
+  @apply mx-5;
+}
+
+/* Inline Code */
+
+.container code {
+  @apply rounded-md bg-gray-100 px-1.5 py-0.5 text-xs;
+}
+
+/* Image */
+
+.container > img {
+  @apply mx-auto my-12 block rounded-xl md:max-w-[36rem];
+}
+
+.container > h1 + img {
+  @apply mt-0;
+}
+
+/* Link */
+
+.container a {
+  @apply underline opacity-80;
+
+  word-break: break-all;
+}
+
+.container a:hover {
+  @apply opacity-100;
+}

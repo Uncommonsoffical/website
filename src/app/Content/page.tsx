@@ -1,128 +1,28 @@
-"use client";
-import { Box, Typography } from "@mui/material";
-import Link from "next/link";
-import { useStore } from "@/store";
-import axios from "axios";
-import useSWR from "swr";
+import React from "react";
 
-interface ArticleType {
-  mediaHash: string;
-  title: string;
-  cover: string;
-  summary: string;
-  tags: ArticleTags[];
-  author: ArticleAuthor;
+import { List } from "@/app/Content/list";
+import { BlogListContextProvider, LoadMoreBtn } from "@/modules/blog";
+import { fetchDefaultBlogsState } from "@/modules/blog/fetch-default-blogs-state";
+
+export const revalidate = 60; // revalidate at every minute
+
+export default async function BlogListPage() {
+    const defaultState = await fetchDefaultBlogsState({ pageSize: 7 });
+
+    return (
+        <BlogListContextProvider defaultState={defaultState}>
+            <div className="lg:pt-8" data-nav-theme="dark">
+                <div className="mx-auto mt-8 box-content max-w-[1300px] pb-9 lg:mt-12 lg:px-16 lg:pb-16">
+                    <div className="px-5 lg:px-0 text-3xl my-10">
+                        Our Content
+                    </div>
+                    <List />
+
+                    <div className="flex items-center justify-center">
+                        <LoadMoreBtn className="mt-10 lg:mt-16" />
+                    </div>
+                </div>
+            </div>
+        </BlogListContextProvider>
+    );
 }
-
-interface ArticleTags {
-  content: string;
-}
-
-interface ArticleAuthor {
-  userName: string;
-}
-
-axios.defaults.withCredentials = true;
-
-function Content() {
-  const { isPC, isIpad } = useStore();
-
-  const {
-    data: articleList = [],
-    error,
-    isLoading,
-  } = useSWR("/api/getContentList", async () => {
-    const result = await axios.get("/api/getContentList");
-    const list =
-      result?.data?.user?.articles?.edges?.map((i: any) => ({
-        ...i.node,
-      })) || [];
-    return list as ArticleType[];
-  });
-  console.log("articleList", articleList);
-  const imgSize = isPC ? "100%" : isIpad ? "168px" : "100%";
-  return (
-    <Box
-      minHeight={{ sm: "calc(100vh - 380px)" }}
-      padding={{ xs: "88px 28px", sm: "88px 48px", xl: "88px 150px" }}>
-      <Typography
-        variant="h2"
-        fontSize={{ sm: "33px", xs: "23px" }}
-        fontWeight="600"
-        marginBottom={{ xs: "64px" }}>
-        Our content
-      </Typography>
-      <Box
-        display="grid"
-        gridTemplateColumns={{ xl: "1fr 1fr 1fr" }}
-        style={{ gridGap: "32px" }}>
-        {articleList.map((article) => (
-          <Link
-            key={article.mediaHash}
-            style={{ textDecoration: "none", color: "#000" }}
-            href={`/Content/${article.mediaHash}`}
-            target="_blank">
-            <Box
-              className="article"
-              height={{ lg: "400px", sm: "auto" }}
-              padding="24px"
-              display="flex"
-              flexDirection={{ lg: "column", sm: "row", xs: "column" }}
-              style={{
-                borderRadius: "5px",
-                border: "1px solid  #1A1A1A",
-                background: "#FFF",
-              }}>
-              <Typography
-                component="img"
-                src={article.cover}
-                style={{
-                  width: imgSize,
-                  height: isPC ? "auto" : imgSize,
-                  maxHeight: "208px",
-                  flexShrink: 0,
-                }}></Typography>
-              <Box
-                marginLeft={{ lg: 0, sm: "24px" }}
-                display="flex"
-                height={{ xl: "100%", sm: "168px" }}
-                flexDirection="column">
-                <Typography
-                  component="h2"
-                  fontSize={{ sm: "28px", xs: "16px" }}
-                  paddingTop={{ lg: "24px", sm: 0, xs: "24px" }}
-                  marginBottom="auto">
-                  {article.title}
-                </Typography>
-                <Box height="100%"></Box>
-
-                <Typography
-                  component="span"
-                  fontSize={{ sm: "20px", xs: "12px" }}>
-                  {article.author.userName}
-                </Typography>
-                <Box flexShrink="0" marginTop="12px">
-                  {article.tags.map((i) => (
-                    <Typography
-                      key={i.content}
-                      component="span"
-                      padding="8px 12px"
-                      color="#5A5858"
-                      fontSize={{ sm: "18px", xs: "12px" }}
-                      borderRadius="30px"
-                      marginRight="12px"
-                      style={{ background: "#D1DEFF" }}>
-                      {i.content}
-                    </Typography>
-                  ))}
-                </Box>
-              </Box>
-            </Box>
-          </Link>
-        ))}
-      </Box>
-    </Box>
-  );
-}
-
-export default Content;
