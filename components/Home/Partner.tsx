@@ -8,7 +8,6 @@ import plancker from "@/images/plancker-logo.svg";
 import abcd from "@/images/abcd-logo.png";
 import WBF from "@/images/WBF-logo.svg";
 import ddao from "@/images/ddao-logo.svg";
-import ptdao from "@/images/ptdao-svg.svg";
 import GCC from "@/images/GCC-logo.svg";
 import Link from "next/link";
 import { useStore } from "@/store";
@@ -53,22 +52,20 @@ function Partner() {
         <Link href="https://lxdao.io/" target="_blank" title="lxdao">
           <Image src={LXDAO} alt="LXDAO" />
         </Link>
-        <Link href="https://plancker.org/">
+        <Link href="https://plancker.org/" target="_blank" title="plancker">
           <Image src={plancker} alt="plancker" />
         </Link>
-        <Link href="/" target="_blank">
+        <Link href="https://t.me/weareabcd" target="_blank">
           <Image src={abcd} alt="abcd" />
         </Link>
-        <Link href="/" target="_blank">
+        <Link href="https://twitter.com/womenbuidl" target="_blank">
           <Image src={WBF} alt="WBF" />
         </Link>
         <Link href="https://discord.gg/sg5c3zqJ6M" target="_blank">
           <Image src={ddao} alt="WBF" />
         </Link>
-        <Link href="/" target="_blank">
-          <Image src={ptdao} alt="ptdao" />
-        </Link>
-        <Link href="/" target="_blank">
+
+        <Link href="https://www.gccofficial.org/" target="_blank">
           <Image src={GCC} alt="GCC" />
         </Link>
       </Box>

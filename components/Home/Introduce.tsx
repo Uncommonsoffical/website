@@ -10,6 +10,7 @@ import leaf1 from "@/images/leaf1.png";
 import leaf2 from "@/images/leaf2.png";
 import Image from "next/image";
 import { useStore } from "@/store";
+import { useRouter } from "next/navigation";
 
 const TextBox = styled(Box)`
   position: absolute;
@@ -23,8 +24,13 @@ const TextBox = styled(Box)`
 `;
 
 function Introduce() {
+  const route = useRouter();
   const { isPC, isIpad, isPhone } = useStore();
   const imgSize = isPC ? "64px" : isIpad ? "54px" : isPhone ? "24px" : "64px";
+
+  const toJoinUs = () => {
+    route.push("/JoinUs");
+  };
 
   return (
     <Box
@@ -126,6 +132,7 @@ function Introduce() {
             }}
           />
         </TextBox>
+
         <TextBox
           padding={{ sm: "16px 32px", xs: "12px 16px" }}
           height={{ sm: "64px", xs: "24px" }}
@@ -135,7 +142,8 @@ function Introduce() {
             border: "1px solid #FF6108 !important",
             cursor: "pointer",
             "&:hover": { boxShadow: "4px 4px 24px 0px rgba(0, 0, 0, 0.10)" },
-          }}>
+          }}
+          onClick={toJoinUs}>
           Join us!
           <Image
             src={Cursorlick}

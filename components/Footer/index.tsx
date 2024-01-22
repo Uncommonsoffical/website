@@ -40,7 +40,7 @@ function Footer() {
           marginRight="32px">
           Social media
         </Typography>
-        <Link href="https://twitter.com/home" target="_blank">
+        <Link href="https://twitter.com/Un__commons" target="_blank">
           <Image
             src={twitter}
             alt="twitter"
