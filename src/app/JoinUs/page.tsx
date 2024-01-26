@@ -8,20 +8,20 @@ import Link from "next/link";
 const contentList = [
   {
     href: "https://www.notion.so/1bc1752ed2554f31b6d8cdeea706a148",
-    title: "新人篝火营地",
+    title: "Pledge campfire",
     content:
       "Within the “Beginner’s bonfire camp”, by undertaking missions of various levels, you can grow and level up within the community.",
     logo: joinus_01,
   },
   {
     href: "https://www.notion.so/dce1dcd8d57541738b6fa3cb44df9327",
-    title: "攻略系列",
+    title: "Walkthrough series",
     content: `By reading the "Beginner’s Handbook," you can gain a better understanding and integrate more smoothly into the community.`,
     logo: joinus_02,
   },
   {
     href: "https://www.notion.so/b61fcf8413ca4c2fb4b552b485a20fb8",
-    title: "社区活动",
+    title: "Community activity",
     content: `Participating in "Community Activities" allows you to interact with more community peers and establish connections.`,
     logo: joinus_03,
   },
@@ -47,11 +47,13 @@ function JoinUs() {
         <Box
           height={{ sm: "156px", xs: "max-content" }}
           padding={{ sm: "24px", xs: "0" }}>
-          <Typography variant="h2" fontSize="19px" fontWeight="500">
-            Introduction
-          </Typography>
-          Welcome to dive into the rabbit hole!
-          <br />
+          <Box
+            component="h2"
+            marginBottom="20px"
+            fontSize="19px"
+            fontWeight="500">
+            Welcome to dive into the rabbit hole!
+          </Box>
           Telegram：
           <Link href="https://t.me/theuncommons" target="_blank">
             https://t.me/theuncommons

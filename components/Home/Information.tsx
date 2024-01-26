@@ -3,7 +3,7 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
 import researchScopes from "@/images/researchScopes.svg";
-import researchScopes_ipad from "@/images/researchScopes_ipad.svg";
+import researchScopes_ipad from "@/images/researchScopes_ipad.png";
 import communityStructure from "@/images/communityStructure.png";
 import communityStructure_ipad from "@/images/communityStructure_ipad.png";
 import { useStore } from "@/store";
