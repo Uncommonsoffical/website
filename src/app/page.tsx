@@ -4,7 +4,7 @@ import Introduce from "../../components/Home/Introduce";
 import Information from "../../components/Home/Information";
 import ArticleBox from "../../components/Home/ArticleBox";
 import Workstream from "../../components/Home/WorkStream";
-import Collaborator from "../../components/Home/Partner";
+// import Partner from "../../components/Home/Partner";
 import { useStore } from "@/store";
 import { useEffect } from "react";
 
@@ -31,7 +31,7 @@ export default function Home() {
       <Information />
       <ArticleBox />
       <Workstream />
-      <Collaborator />
+      {/* <Partner /> */}
     </Box>
   );
 }
