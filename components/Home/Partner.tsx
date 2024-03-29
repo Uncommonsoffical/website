@@ -71,12 +71,12 @@ function Partner() {
         <Link href="https://www.gccofficial.org/" target="_blank">
           <Image src={GCC} alt="GCC" />
         </Link>
-        <Link href="https://protector.notion.site/" target="_blank">
+        {/* <Link href="https://protector.notion.site/" target="_blank">
           <Image src={protector} alt="protector" />
         </Link>
         <Link href="http://haotian.io/" target="_blank">
           <Image src={HTLC} alt="HTLC" />
-        </Link>
+        </Link> */}
       </Box>
     </Box>
   );
