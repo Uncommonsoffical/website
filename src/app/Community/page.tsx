@@ -8,7 +8,7 @@ function Community() {
     <Box padding={{ xs: "88px 28px", sm: "88px 48px", xl: "88px 150px" }}>
       <Typography
         variant="h2"
-        fontSize={{ sm: "33px", xs: "23px" }}
+        fontSize={{ sm: "28px", xs: "19px" }}
         fontWeight="600"
         marginBottom={{ xs: "48px" }}>
         Community structure
@@ -35,12 +35,10 @@ function Community() {
         fontWeight="300"
         color="#2E2E2E"
         marginBottom={{ sm: "32px", xs: "48px" }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua.
+        Our collaboration and organizational structure consists of
+        decision-making (Steward Council), supervision (Health Assistant),
+        execution (Operator), and workgroup (Workstream/Playstream)
+        respectively.
       </Typography>
       <Image
         src={community1}
@@ -66,12 +64,9 @@ function Community() {
         fontWeight="300"
         color="#2E2E2E"
         marginBottom="36px">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua.
+        UIP stands for Uncommons Improvement Proposal.(prev.GIP:GIP stands for
+        GreenPillCn Improvement Proposal) All Proposals have four basic
+        states：Idea、Draft、Review、Final.
       </Typography>
       <Image
         src={community2}
