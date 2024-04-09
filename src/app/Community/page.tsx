@@ -15,7 +15,7 @@ function Community() {
       </Typography>
       <Typography
         variant="body1"
-        fontSize="16px"
+        fontSize={{ sm: "28px", xs: "19px" }}
         fontWeight="300"
         color="#2E2E2E"
         marginBottom="48px">
@@ -31,7 +31,7 @@ function Community() {
       </Typography>
       <Typography
         variant="body1"
-        fontSize="22px"
+        fontSize={{ sm: "28px", xs: "19px" }}
         fontWeight="300"
         color="#2E2E2E"
         marginBottom={{ sm: "32px", xs: "48px" }}>
@@ -60,7 +60,7 @@ function Community() {
       </Typography>
       <Typography
         variant="body1"
-        fontSize="22px"
+        fontSize={{ sm: "28px", xs: "19px" }}
         fontWeight="300"
         color="#2E2E2E"
         marginBottom="36px">
@@ -81,7 +81,7 @@ function Community() {
 
       <Typography
         variant="h2"
-        fontSize={{ sm: "33px", xs: "23px" }}
+        fontSize={{ sm: "28px", xs: "19px" }}
         fontWeight="600"
         marginBottom="48px">
         Community Roles
