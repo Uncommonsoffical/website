@@ -21,7 +21,7 @@ export function LoadMoreBtn({ className }: { className?: string }) {
             noArrow={true}
             disabled={isFetching}
             className={clsx(
-                "cursor-pointer border text-white hover:border-current hover:bg-index-grey hover:text-black",
+                "cursor-pointer border text-black hover:border-current",
                 !hasNext && "hidden",
                 isFetching && "opacity-50",
                 className
