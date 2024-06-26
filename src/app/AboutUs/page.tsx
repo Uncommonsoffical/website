@@ -190,7 +190,7 @@ function AboutUs() {
             target="_blank"
             style={{ color: "#000", textDecoration: "none" }}>
             <Image
-              src={about_02}
+              src={about_03}
               style={{ width: imgWidthSize, height: "auto", flexShrink: 0 }}
               alt="about us"
             />
@@ -210,7 +210,7 @@ function AboutUs() {
             target="_blank"
             style={{ color: "#000", textDecoration: "none" }}>
             <Image
-              src={about_03}
+              src={about_02}
               style={{ width: imgWidthSize, height: "auto", flexShrink: 0 }}
               alt="about us"
             />
