@@ -13,6 +13,7 @@ import Image from "next/image";
 import about_01 from "@/images/about-01.png";
 import about_02 from "@/images/about-02.png";
 import about_03 from "@/images/about-03.png";
+import about_04 from "@/images/about-04.jpg";
 import { useStore } from "@/store";
 import Link from "next/link";
 
@@ -220,6 +221,31 @@ function AboutUs() {
               fontWeight="700"
               marginTop="24px">
               ImpactDAOs
+            </Typography>
+          </Link>
+        </Box>
+        <Box>
+          <Link
+            href="https://drive.google.com/file/d/1mkf8TkGNbWXqTSNLNBYrbdG_GopD5fgC/view"
+            target="_blank"
+            style={{ color: "#000", textDecoration: "none" }}>
+            <Image
+              src={about_04}
+              style={{
+                width: imgWidthSize,
+                height: "auto",
+                maxHeight: 450,
+                objectFit: "cover",
+                flexShrink: 0,
+              }}
+              alt="about us"
+            />
+            <Typography
+              variant="h3"
+              fontSize="24px"
+              fontWeight="700"
+              marginTop="24px">
+              探索 M YC OF I
             </Typography>
           </Link>
         </Box>
