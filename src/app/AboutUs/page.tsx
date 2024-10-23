@@ -245,7 +245,7 @@ function AboutUs() {
               fontSize="24px"
               fontWeight="700"
               marginTop="24px">
-              探索 M YC OF I
+              Mycofi
             </Typography>
           </Link>
         </Box>
